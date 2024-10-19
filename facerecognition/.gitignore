@@ -1,0 +1,66 @@
+# Angular Specific
+node_modules/
+dist/
+coverage/
+.e2e/
+.angular/
+src/**/*.js
+src/**/*.map
+src/**/*.d.ts
+
+# Environment Files
+src/environments/*.ts
+
+# IDE and Editor Specific Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build Artifacts
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.so
+*.app
+
+# Visual Studio Files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.ide
+
+# NuGet Packages
+*.nupkg
+packages/
+project.lock.json
+
+# ASP.NET Core specific
+bin/
+obj/
+*.db
+*.db-journal
+*.db-wal
+
+# Logs
+*.log
+logs/
+log/
+
+# Others
+*.tmp
+*.temp
+*.cache
+*.swp
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+
+# Others
+Thumbs.db
+.DS_Store
+*.swp
