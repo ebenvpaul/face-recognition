@@ -1,13 +1,111 @@
-.webcam-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Make the page full-screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2c2c2c, #121212); /* Dark gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Fullscreen container */
+.fullscreen-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Webcam Section */
+.webcam-section {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Webcam container */
+.webcam-container video {
+  width: 100%;  /* Full width for the video element */
+  max-width: 720px; /* Limit the maximum width */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+.btn {
+  font-weight: 500;
+  padding: 10px 30px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #b02a37; /* Darker red on hover */
+}
+
+.card-header, .card-footer {
+  background-color: #1c1c1c; /* Darker header and footer */
+  color: white;
+}
+
+.card-footer {
+  background-color: #343a40;
+  color: #ddd;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Tiles Layout for Detected Faces */
+.face-tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.face-tile {
+  background-color: #3a3a3a;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.face-tile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Make the video element responsive */
+@media (max-width: 768px) {
+  .webcam-section {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .face-tile-container {
     flex-direction: column;
   }
-  
-  video {
-    border: 2px solid black;
-    border-radius: 8px;
-    margin: 10px;
-  }
-  
+}

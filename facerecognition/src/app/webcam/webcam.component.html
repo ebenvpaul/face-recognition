@@ -1,4 +1,34 @@
-<div class="webcam-container">
-    <video #videoElement width="640" height="480" autoplay></video>
+<div class="fullscreen-container">
+  <!-- Webcam Section -->
+  <div class="webcam-section">
+    <div class="card shadow-lg border-0">
+      <div class="card-header text-center">
+        <h3 class="mb-0">AI Face Detection System</h3>
+      </div>
+      <div class="card-body">
+        <div class="webcam-container text-center">
+          <video #videoElement id="videoElement" class="rounded border border-secondary" autoplay></video>
+        </div>
+        <div class="mt-4 text-center">
+          <button 
+            class="btn btn-danger btn-lg px-5" 
+            [ngClass]="{ 'btn-danger': webcamActive, 'btn-success': !webcamActive }" 
+            (click)="toggleWebcam()">
+            {{ webcamActive ? 'Stop Webcam' : 'Start Webcam' }}
+          </button>
+        </div>
+
+        <!-- Detected Faces Section -->
+        <div class="face-tile-container mt-4">
+          <!-- Dynamically display detected faces -->
+          <div *ngFor="let face of detectedFaces" class="face-tile">
+            <img [src]="face" alt="Detected Face">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted text-center">
+        <small>Powered by AI Face Detection | Secure and Efficient</small>
+      </div>
+    </div>
   </div>
-  <button (click)="stopWebcam()">Stop Webcam</button>
+</div>
